@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+<nav>
+<h2>AI Fake Review Detection Dashboard</h2>
+
+<div>
+<button onclick="toggleTheme()">Theme</button>
+<button onclick="logout()">Logout</button>
+</div>
+</nav>
+
+<section class="grid">
+
+<div class="card">
+
+<h3>Analyze Review</h3>
+
+<textarea
+id="review"
+placeholder="Paste review here..."
+></textarea>
+
+<button onclick="analyze()">
+Check Review
+</button>
+
+<hr>
+
+<p id="result"></p>
+
+<p id="confidence"></p>
+
+<p id="trustScore"></p>
+
+<h4>Suspicious Words</h4>
+
+<ul id="suspiciousWords"></ul>
+
+<h4>Explanation</h4>
+
+<ul id="explanation"></ul>
+
+</div>
+
+<div class="card">
+
+<h3>AI Assistant</h3>
+
+<input
+id="chatInput"
+placeholder="Ask a question..."
+>
+
+<button onclick="sendChat()">
+Send
+</button>
+
+<p id="chatOutput"></p>
+
+</div>
+
+<div class="card">
+
+<h3>Review History</h3>
+
+<button onclick="loadHistory()">
+Load History
+</button>
+
+<ul id="history"></ul>
+
+</div>
+
+<div class="card">
+
+<h3>Analytics Dashboard</h3>
+
+<p>
+Total Reviews:
+<b id="totalReviews">0</b>
+</p>
+
+<p>
+Fake Reviews:
+<b id="fakeReviews">0</b>
+</p>
+
+<p>
+Real Reviews:
+<b id="realReviews">0</b>
+</p>
+
+<p>
+Trust Score:
+<b id="analyticsTrust">0</b>%
+</p>
+
+<canvas id="chart"></canvas>
+
+</div>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
