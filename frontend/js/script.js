@@ -1,4 +1,4 @@
-const API = "http://127.0.0.1:10000";
+const API = "https://fake-review-detection-system-rj90.onrender.com";
 
 let chartInstance = null;
 
